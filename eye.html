@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle</title>
+    
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.password-container {
+    position: relative;
+    width: 300px;
+    margin: 100px auto;
+}
+
+#password {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Space for the eye icon */
+}
+
+#toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.eye-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="password-container">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button id="toggle-password" class="eye-icon">
+            <img src="eye-closed.png" alt="Toggle Password Visibility" id="eye-icon">
+        </button>
+    </div>
+
+    <script >
+        // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const passwordField = document.getElementById('password');
+    const togglePasswordButton = document.getElementById('toggle-password');
+    const eyeIcon = document.getElementById('eye-icon');
+
+    togglePasswordButton.addEventListener('click', () => {
+        // Toggle the type of the password field
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            eyeIcon.src = 'eye-open.png'; // Change to the eye open icon
+        } else {
+            passwordField.type = 'password';
+            eyeIcon.src = 'eye-closed.png'; // Change to the eye closed icon
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

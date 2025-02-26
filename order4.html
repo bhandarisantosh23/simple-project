@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jacket</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 800px;
+    }
+
+    .product-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-image img {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+    }
+
+    .product-details {
+      margin-left: 20px;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .product-rating .star {
+      color: #ffc107;
+      font-size: 16px;
+    }
+
+    .product-rating .ratings {
+      font-size: 14px;
+      margin-left: 5px;
+    }
+
+    .product-price {
+      font-size: 32px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .product-price .original-price {
+      font-size: 16px;
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .product-price .discount {
+      font-size: 16px;
+      color: #007bff;
+    }
+
+    .product-description {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .product-features {
+      margin-bottom: 20px;
+    }
+
+    .product-features h4 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-features ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .product-features li {
+      margin-bottom: 5px;
+    }
+
+    .product-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .product-button button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .product-button .buy-now {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .product-button .add-to-cart {
+      background-color: #ffc107;
+      color: #fff;
+    }
+
+    .product-gallery {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .product-gallery .image-container {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .product-gallery .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .rating {
+            display: flex;
+            direction: row;
+            font-size: 24px;
+            color: #FFD700; /* Gold color for stars */
+            cursor: pointer;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            margin: 0;
+        }
+        .rating input:checked ~ label {
+            color: #FFD700;
+        }
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #FFEB3B; /* Lighter gold for hover effect */
+        }
+        .product button{
+          color: red;
+          height:48px;
+          width:49px;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product">
+      <button id="home">
+        &larr;
+    </button>
+      <div class="product-image">
+        <!-- <img src="image/jacket4.png " alt="bag"> -->
+        <img id="mainImage" src="image/jacket4.png" alt="jacket">
+      </div>
+      <div class="product-details">
+        <div class="product-title">
+            Gusci T-shirts offer stylish designs with high-quality fabric, combining comfort and modern aesthetics for everyday wear.
+        </div>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5">
+          <label for="star5" title="5 stars">★</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4" title="4 stars">★</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3" title="3 stars">★</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2" title="2 stars">★</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1" title="1 star">✩</label>
+      </div>
+        <div class="product-price">
+          Rs. 999
+          <span class="original-price">Rs.1200</span>
+          <span class="discount">-39%</span>
+        </div>
+        <div class="product-description">
+            Gucci jackets merge style with practicality, featuring modern designs and high-quality materials. They provide both warmth and sophistication, suitable for various weather conditions and occasions.        <div class="product-features">
+       <h4>Available different color option,size,designs</h4>
+             <!-- <ul>
+            <li>Made of aluminum alloy</li>
+            <li>Adjustable height and angle</li>
+            <li>Cooling design</li>
+            <li>Lightweight and portable</li>
+          </ul> -->
+        </div>
+        <div class="product-gallery">
+          <div class="image-container">
+            <img src="image/jacket4.png" alt="jacket" onclick="changeImage('image/jacket4.png')">
+          </div>
+          <div class="image-container">
+            <img src="image/jacket2.jpeg" alt="jacket" onclick="changeImage('image/jacket2.jpeg')">
+          </div>
+          <div class="image-container">
+            <img src="image/jacket1.png" alt="jacket" onclick="changeImage('image/jacket1.png')">
+          </div>
+          <div class="image-container">
+            <img src="image/jacket3.jpeg" alt="jacket" onclick="changeImage('image/jacket3.jpeg')">
+          </div>
+        </div>
+        <div class="product-button">
+          <button class="buy-now">Buy Now</button>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+    document.getElementById('home').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
